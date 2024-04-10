@@ -12,6 +12,6 @@ def listarjugadores(names, goles, salvadas, asistencias):
     :doc-autor: Silva Julian
     """
     lista_jugadores= []
-    for jugador in names:
-        lista_jugadores.append((jugador, goles[0], salvadas[0], asistencias[0]))
+    for i in range(len(names)):
+        lista_jugadores.append((names[i], goles[i], salvadas[i], asistencias[i]))
     return lista_jugadores

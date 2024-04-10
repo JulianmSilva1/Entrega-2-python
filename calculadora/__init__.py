@@ -31,3 +31,23 @@ def goleador(lista_jugadores):
             maxGol= goleador[1]
             maxNom= goleador[0]
     return maxNom, maxGol
+
+def jugadorMasInfluyente(lista_jugadores):
+    """
+    La función jugadorMasInfluyente toma como argumento una lista de tuplas. Cada tupla contiene el nombre, la cantidad de goles marcados, salvadas y asistencias por jugador. 
+    La función devuelve el nombre del jugador con mayor influencia en el rendimiento de su equipo.
+
+    :param lista_jugadores: Pasar la lista de jugadores a la función
+    :return: El nombre del jugador con la puntuación más alta
+    :doc-autor: Silva Julian
+    """
+    puntaje_gol= 1.5
+    puntaje_salvada= 1.25
+    max= -1
+    for jugador in lista_jugadores:
+        puntaje= 0
+        puntaje= (jugador[1]*puntaje_gol) + (jugador[2]*puntaje_salvada) + (jugador[3])
+        if(puntaje>max):
+            max= puntaje
+            nombreMax= jugador[0]
+    return nombreMax

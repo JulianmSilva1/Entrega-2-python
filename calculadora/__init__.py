@@ -40,3 +40,14 @@ def promGoles(lista_jugadores):
     partidos= 25
     suma= sum(map(lambda jug: jug[1], lista_jugadores))
     return suma/partidos
+
+def promedioGoleador(jugador_est):
+    """
+    La función promedioGoleador toma como entrada una tupla que contiene nombre y goles de un jugador.
+    La función devuelve el promedio de goles del goleador
+    
+    :param jugador_est: Almacena la tupla del jugador
+    :return: El promedio de goles por partido
+    """
+    partidos= 25
+    return jugador_est[0]/25
